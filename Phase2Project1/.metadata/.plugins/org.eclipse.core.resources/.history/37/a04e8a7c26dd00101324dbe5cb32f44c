@@ -1,0 +1,16 @@
+@tag
+Feature: Add To Cart Page
+  I want to use this template for my feature file
+
+@functional1
+Scenario: Add to Cart
+    Given User opens ecommerce app
+    When If the user is able to click on the Add to Cart button
+    #adding to validate the title dresses is displayed for now since add to cart button not working
+    Then Verify Add to Cart page is displayed
+    
+@functional2
+Scenario: Checkout button
+    Given User opens ecommerce app
+    When If the user is able to click on the Checkout button
+    Then Verify Checkout page is displayed

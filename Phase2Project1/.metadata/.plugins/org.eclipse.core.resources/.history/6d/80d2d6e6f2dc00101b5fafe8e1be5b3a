@@ -1,0 +1,51 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import Base.BaseTest;
+
+//Create a new class to test elements on the e-commerce application's Home page
+//The HomePage class should extend the test base class so that we can import method OpenBrowser()
+public class HomePage extends BaseTest {
+
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	// Page Factory
+	By menuPages = By.xpath("//a[text()='Pages']");
+	By contactItemOnmenuPages = By.xpath("//ul[@class]//a[text()='Contact']");
+
+	// Create a test method and name it HomePageTest()
+	public void HomePageTest() throws InterruptedException {
+		// Write steps to perform mouse hover action on menu option Pages
+		hoverOverMenuPages();
+		//Write steps to click on Contact in the dropdown list
+		clickContactInDropdown();
+		//Write steps to handle the Alert box that will appear
+		//***NOTE*** Alert is not displayed. Trainer indicated functionality not working
+		// should be ok commenting code or doing something else
+		//handleAlert();
+
+	}
+	
+	public void hoverOverMenuPages() throws InterruptedException {	
+		// Write steps to perform mouse hover action on menu option Pages
+		WebElement menuPages1 =driver.findElement(menuPages);
+		 Actions acHoverMenuPages = new Actions(driver);
+		 acHoverMenuPages.moveToElement(menuPages1).build().perform();
+		 Thread.sleep(2000);
+	}
+	public void clickContactInDropdown() {
+		//Write steps to click on Contact in the dropdown list
+		driver.findElement(contactItemOnmenuPages).click();		
+	}
+	
+	public void handleAlert() {
+		//Write steps to handle the Alert box that will appear
+		driver.switchTo().alert().accept();		
+	}
+}

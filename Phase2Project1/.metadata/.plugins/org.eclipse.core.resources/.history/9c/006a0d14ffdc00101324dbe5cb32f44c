@@ -1,0 +1,8 @@
+@tag
+Feature: Add To Cart Page
+I want to use this template for my feature file
+@smoke
+Scenario: Want to test
+Given User access ecommerce app
+When User click on login
+Then User close application

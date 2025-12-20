@@ -1,0 +1,19 @@
+package TestCases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import Base.BaseTest;
+import Pages.HomePage;
+
+public class TestScenario1 extends BaseTest {
+
+	@Test
+	public void testScenario1() throws InterruptedException {
+		HomePage homePage = new HomePage(driver);
+		homePage.HomePageTest();
+        String actualHeading = homePage.getHeadingText();
+        Assert.assertEquals(actualHeading, "How to Find Us");
+	}
+	
+}

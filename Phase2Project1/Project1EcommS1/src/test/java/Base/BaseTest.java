@@ -1,0 +1,37 @@
+package Base;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+//Create a Base test class and write steps
+public class BaseTest {
+
+	protected WebDriver driver;
+
+	// Create a method and name it OpenBrowser()
+	@BeforeClass
+	public void OpenBrowser() {
+		
+		//Add steps to open the Chrome browser and maximize the window
+		 driver = new ChromeDriver();
+		 //maximize the window
+		 driver.manage().window().maximize();
+		 //Add steps to open the application URL in the browser
+		 driver.get("http://localhost/ecomm/index.html");
+		 //Add steps to code to delete cookies
+		 driver.manage().deleteAllCookies();
+		 //Add Selenium commands in the PageLoadTimeout code
+		 driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
+		 }
+
+	@AfterClass
+	public void closeBrowser() {
+		if (driver != null) {
+			driver.close();
+		}
+	}
+}

@@ -1,0 +1,6 @@
+@tag
+Feature: Ecommerce
+I want to use this template for my feature file
+@smoke
+Scenario: Want to test
+Given User access sl

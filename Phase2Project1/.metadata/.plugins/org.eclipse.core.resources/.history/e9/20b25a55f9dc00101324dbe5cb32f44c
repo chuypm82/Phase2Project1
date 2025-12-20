@@ -1,0 +1,13 @@
+package project1S2.Project1EcommS2;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}

@@ -1,0 +1,15 @@
+package Hooks;
+
+public class testHooks {
+	
+	@BeforeAll
+	public static void setup() {		
+		System.out.println("Setup");	
+	}
+	
+	@AfterAll
+	public static void tearDown() {
+		System.out.println("TearDown");
+	}
+
+}
