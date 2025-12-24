@@ -34,7 +34,7 @@ public class HomePage extends BaseTest {
 		//Write steps to handle the Alert box that will appear
 		//***NOTE*** Alert is not displayed. Trainer indicated functionality not working
 		// should be ok commenting code or doing something else
-		//handleAlert();
+		handleAlert();
 	}
 	
 	public void hoverOverMenuPages() throws InterruptedException {	
@@ -51,6 +51,7 @@ public class HomePage extends BaseTest {
 	
 	public void handleAlert() {
 		//Write steps to handle the Alert box that will appear
-		driver.switchTo().alert().accept();		
+		//driver.switchTo().alert().accept();
+		driver.navigate().refresh();
 	}
 }
